@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8dff0">
+  <title>ထက်ထက် အတွက် မွေးနေ့လက်ဆောင်</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-one"></span><span class="orb orb-two"></span>
+    <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span>
+    <span class="sparkle s3">✦</span><span class="sparkle s4">✧</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Home"><span class="brand-mark">✧</span> ထက်ထက် · Birthday Universe</a>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle music">♫ <span>Music</span></button>
+  </header>
+
+  <audio id="birthdayMusic" loop>
+  <source src="music/birthday.mp3" type="audio/mpeg">
+  </audio>
+  
+
+  <main>
+    <section class="screen welcome-screen active" id="welcome">
+      <div class="welcome-card glass">
+        <div class="eyebrow">A LITTLE WORLD MADE WITH LOVE</div>
+        <div class="moon">☾</div>
+        <h1>ဒီနေ့လေးက<br><span>ထက်ထက် အတွက်ပါ</span></h1>
+        <p class="welcome-copy">ထက်ထက် အတွက် ပြင်ဆင်ထားတဲ့<br>မှော်ဆန်တဲ့ မွေးနေ့ခရီးလေးကို စလိုက်ရအောင်…</p>
+        <div class="gift-box" aria-hidden="true"><span>🌷</span></div>
+        <button class="primary-btn" id="openGift"> Surprise ကို ဖွင့်ကြည့်မယ် <span>✧</span></button>
+        <p class="tiny-note">Made with care, just for you two ♡</p>
+      </div>
+    </section>
+
+    <section class="screen birthday-screen" id="birthday">
+      <button class="back-btn" id="backHome">← အစကိုပြန်သွားမယ်</button>
+      <div class="birthday-hero">
+        <div class="eyebrow" id="birthdayEyebrow">A DAY MADE JUST FOR YOU</div>
+        <div class="hero-decor" id="heroDecor">🌷</div>
+        <h2 id="birthdayTitle">Happy Birthday!</h2>
+        <p id="birthdaySubtitle" class="birthday-subtitle"></p>
+        <div class="age-pill" id="agePill"></div>
+      </div>
+
+      <div class="content-grid">
+        <article class="feature-card cake-card">
+          <div class="card-kicker">MAKE A WISH</div>
+          <h3>ဆုတောင်းလေး တစ်ခုတောင်းလိုက်နော်</h3>
+          <p class="muted">ဖယောင်းတိုင်လေးတွေကို မှုတ်ပြီး ဆုတောင်းလိုက်ပါ ✨</p>
+          <div class="cake-scene">
+            <div class="flames" id="flames"><i></i><i></i><i></i></div>
+            <div class="candles"><span></span><span></span><span></span></div>
+            <div class="cake-top"></div><div class="cake-body"></div><div class="cake-plate"></div>
+          </div>
+          <button class="secondary-btn" id="blowCandles">🕯️ ဖယောင်းတိုင် မှုတ်မယ်</button>
+          <p class="wish-result" id="wishResult" aria-live="polite"></p>
+        </article>
+
+        <article class="feature-card letter-card">
+          <div class="card-kicker">A LETTER FROM YOUR TEACHER</div>
+          <h3>ကလေးအတွက် စာလေးတစ်စောင် 💌</h3>
+          <p class="muted">ဖတ်ပြီးရင် စိတ်ထဲမှာ သိမ်းထားပေးနော်။</p>
+          <button class="primary-btn letter-open" id="openLetter">စာလေးကို ဖတ်မယ် <span>♡</span></button>
+        </article>
+      </div>
+
+      <article class="feature-card memory-card">
+        <div class="card-kicker">A LITTLE MEMORY CORNER</div>
+        <h3>အမှတ်တရလေးများ</h3>
+        <p class="muted">ကိုယ့်ညီမလေးရဲ့ အမှတ်တရပုံလေးတွေ အများကြီးမရှိလို့ ရှိတာလေးဘဲထည့်လိုက်ရတယ်</p>
+        
+<div class="photo-grid" id="gallery"></div>
+
+      </article>
+
+      <article class="feature-card secret-card">
+        <div class="secret-icon">🔐</div>
+        <div><div class="card-kicker">A TINY SECRET</div><h3>လျှို့ဝှက်လက်ဆောင်လေး</h3><p class="muted">ဖွင့်ကြည့်မှ သိရမယ့် စကားလေးတစ်ခွန်းရှိတယ်။</p></div>
+        <button class="secondary-btn" id="secretBtn">ဖွင့်ကြည့်မယ် ✨</button>
+        <p class="secret-message" id="secretMessage"></p>
+      </article>
+
+      <div class="finale">
+        <div class="finale-stars">✦　✧　✦</div>
+        <h3>ကလေးရဲ့နေ့ရက်တိုင်း<br><span>ဒီနေ့လိုပဲ လှပပါစေ</span></h3>
+        <p>အိပ်မက်တွေကို မစွန့်လွှတ်ပါနဲ့။ သမီးကို အမြဲအားပေးနေမယ်။ ဖိုက်တင်း။</p>
+        <button class="secondary-btn" id="fireworksBtn">🎆 မီးရှူးမီးပန်း ဖွင့်မယ်</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterHeading">
+    <article class="letter-paper">
+      <button class="modal-close" id="closeLetter" aria-label="Close">×</button>
+      <div class="letter-stamp">♡</div>
+      <div class="eyebrow">A LETTER FOR YOU</div>
+      <h2 id="letterHeading">ချစ်ရတဲ့ ညီမလေးရေ…</h2>
+      <div class="letter-body" id="letterBody"></div>
+    </article>
+  </div>
+  <!-- Fullscreen Photo Viewer: kept outside .screen so its fixed positioning is viewport-relative -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Photo viewer">
+    <button class="close-btn" id="closeLightbox" type="button" aria-label="Close photo viewer">×</button>
+    <button class="nav-btn prev" id="prevPhoto" type="button" aria-label="Previous photo">❮</button>
+    <img src="" id="lightboxImage" alt="Preview">
+    <button class="nav-btn next" id="nextPhoto" type="button" aria-label="Next photo">❯</button>
+    <p id="photoCounter" aria-live="polite"></p>
+  </div>
+
+  <div class="fireworks-layer" id="fireworksLayer" aria-hidden="true"></div>
+  <footer>Made with love · ထက်ထက် · Birthday 2026 ♡</footer>
+  <script src="script.js"></script>
+</body>
+</html>
